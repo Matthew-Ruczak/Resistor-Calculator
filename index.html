@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Just remember, the order that JS and CSS is loaded matters! -->
+        <!-- Meta Data -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- This tells the browser not to zoom out (this is done by scaling to the device) (important for mobile)-->
+
+        <!-- This is where you put the title of your current page-->
+        <title>Resistor Ohms Helper</title>
+
+        <!-- External JavaScript -->
+        <script src="file_Location.js"></script>
+
+        <!-- External CSS -->
+        <link rel="stylesheet" type="text/css" href="file_Location.css">
+
+        <!-- Internal CSS-->
+        <style>
+        </style>
+
+        <!-- Internal JavaScript -->
+        <script>
+        </script>
+    </head>
+    <body>
+        <h1>Resistor Ohms Helper</h1>
+        <p>
+            <strong>Instructions</strong><br>
+            First, select the number of bands the resistor is. Then, click on the bands you would like to change and the number of ohms the resistor is will appear below.
+        </p>
+        <form>
+            <label>Band 1</label>
+            <select>
+                <option value="0">Black</option>
+                <option value="1">Brown</option>
+                <option value="2">Red</option>
+                <option value="3">Orange</option>
+                <option value="4">Yellow</option>
+                <option value="5">Green</option>
+                <option value="6">Blue</option>
+                <option value="7">Violet</option>
+                <option value="8">Grey</option>
+                <option value="9">White</option>
+            </select>
+            <br>
+            <label>Band 2</label>
+            <select>
+                <option value="0">Black</option>
+                <option value="1">Brown</option>
+                <option value="2">Red</option>
+                <option value="3">Orange</option>
+                <option value="4">Yellow</option>
+                <option value="5">Green</option>
+                <option value="6">Blue</option>
+                <option value="7">Violet</option>
+                <option value="8">Grey</option>
+                <option value="9">White</option>
+            </select>
+            <br>
+            <label>Band 3 (Only use for 5 & 6 Band Resistor)</label>
+            <select>
+                <option value="n/a">N/A</option>
+                <option value="0">Black</option>
+                <option value="1">Brown</option>
+                <option value="2">Red</option>
+                <option value="3">Orange</option>
+                <option value="4">Yellow</option>
+                <option value="5">Green</option>
+                <option value="6">Blue</option>
+                <option value="7">Violet</option>
+                <option value="8">Grey</option>
+                <option value="9">White</option>
+            </select>
+            <br>
+            <label>Multiplier</label>
+            <select>
+                <option value="0.01">Silver</option>
+                <option value="0.1">Gold</option>
+                <option value="1">Black</option>
+                <option value="10">Brown</option>
+                <option value="100">Red</option>
+                <option value="1000">Orange</option>
+                <option value="10000">Yellow</option>
+                <option value="100000">Green</option>
+                <option value="1000000">Blue</option>
+                <option value="10000000">Purple</option>
+            </select>
+            <br>
+            <label>Tolerance</label>
+            <select>
+                <option value="10">Silver</option>
+                <option value="5">Gold</option>
+                <option value="2">Red</option>
+                <option value="1">Brown</option>
+                <option value="0.5">Green</option>
+                <option value="0.25">Blue</option>
+                <option value="0.1">Purple</option>
+            </select>
+        </form>
+        <p>
+            The Resistor is <span>____</span> Ohms, with a tolerance of <span>____</span>, and a temperature coefficient of <span>___</span>.
+        </p>
+    </body>
+</html>
