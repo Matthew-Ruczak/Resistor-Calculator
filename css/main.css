@@ -1,0 +1,22 @@
+body {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size: 18px;
+}
+
+#title {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#resistorInputArea, #resistorOutArea {
+    margin-left: 3%;
+}
+
+.bandSelection {
+    margin-bottom: 1%;
+}

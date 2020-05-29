@@ -13,7 +13,7 @@
         <script src="js/main.js"></script>
 
         <!-- External CSS -->
-        <link rel="stylesheet" type="text/css" href="file_Location.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
 
         <!-- Internal CSS-->
         <style>
@@ -24,7 +24,7 @@
         </script>
     </head>
     <body>
-        <h1>Resistor Ohms Helper</h1>
+        <h1 id="title">Resistor Ohms Helper</h1>
         <p>
             <strong>Instructions</strong><br>
             <ol>
@@ -32,11 +32,12 @@
                 <li>Change the corresponding bands below</li>
                 <li>The information about the resistor will appear below</li>
             </ol>
-            First, . Then, click on the bands you would like to change and the number of ohms the resistor is will appear below.
         </p>
-        <form>
-            <label>Band 1</label>
-            <select id="band_1">
+        <hr>
+        <p><strong>Input</strong></p>
+        <form id="resistorInputArea">
+            <label>Band 1</label> <br>
+            <select id="band_1" class="bandSelection">
                 <option value="0">Black</option>
                 <option value="1">Brown</option>
                 <option value="2">Red</option>
@@ -49,8 +50,8 @@
                 <option value="9">White</option>
             </select>
             <br>
-            <label>Band 2</label>
-            <select id="band_2">
+            <label>Band 2</label> <br>
+            <select id="band_2" class="bandSelection">
                 <option value="0">Black</option>
                 <option value="1">Brown</option>
                 <option value="2">Red</option>
@@ -63,8 +64,8 @@
                 <option value="9">White</option>
             </select>
             <br>
-            <label>Band 3 (Only use for 5 & 6 Band Resistors)</label>
-            <select id="band_3">
+            <label>Band 3 (Only use for 5 & 6 Band Resistors)</label> <br>
+            <select id="band_3" class="bandSelection">
                 <option value="">N/A</option>
                 <option value="0">Black</option>
                 <option value="1">Brown</option>
@@ -78,8 +79,8 @@
                 <option value="9">White</option>
             </select>
             <br>
-            <label>Multiplier</label>
-            <select id="band_multiplier">
+            <label>Multiplier</label> <br>
+            <select id="band_multiplier" class="bandSelection">
                 <option value="0.01">Silver</option>
                 <option value="0.1">Gold</option>
                 <option value="1">Black</option>
@@ -92,8 +93,8 @@
                 <option value="10000000">Purple</option>
             </select>
             <br>
-            <label>Tolerance</label>
-            <select id="band_tolerance">
+            <label>Tolerance</label> <br>
+            <select id="band_tolerance" class="bandSelection">
                 <option value="10">Silver</option>
                 <option value="5">Gold</option>
                 <option value="2">Red</option>
@@ -103,8 +104,8 @@
                 <option value="0.1">Purple</option>
             </select>
             <br>
-            <label>Temperture Coefficient (Only for 6 Band Resistors)</label>
-            <select id="band_tempCoefficient">
+            <label>Temperture Coefficient (Only for 6 Band Resistors)</label> <br>
+            <select id="band_tempCoefficient" class="bandSelection">
                 <option value="N/A">N/A</option>
                 <option value="100">Brown</option>
                 <option value="50">Red</option>
@@ -112,11 +113,10 @@
                 <option value="15">Orange</option>
             </select>
         </form>
-        <br>
-        <br>
-        <button onclick="updateDisplay()">Find</button>
-        <p>
-            The Resistor is <span id="text_ohms">____</span> Ohms, with a tolerance of <span id="text_tolerance"></span>, and a temperature coefficient of <span id="text_tempCoefficent">___</span> ppm.
+        <p><strong>Output</strong></p>
+        <p id="resistorOutArea">
+            The Resistor is <span id="text_ohms">____</span> Ohms, with a tolerance of <span id="text_tolerance"></span> <span id="text_tempCoefficent"></span>
         </p>
+        <br>
     </body>
 </html>
