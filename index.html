@@ -10,7 +10,7 @@
         <title>Resistor Ohms Helper</title>
 
         <!-- External JavaScript -->
-        <script src="file_Location.js"></script>
+        <script src="js/main.js"></script>
 
         <!-- External CSS -->
         <link rel="stylesheet" type="text/css" href="file_Location.css">
@@ -31,7 +31,7 @@
         </p>
         <form>
             <label>Band 1</label>
-            <select>
+            <select id="band_1">
                 <option value="0">Black</option>
                 <option value="1">Brown</option>
                 <option value="2">Red</option>
@@ -45,7 +45,7 @@
             </select>
             <br>
             <label>Band 2</label>
-            <select>
+            <select id="band_2">
                 <option value="0">Black</option>
                 <option value="1">Brown</option>
                 <option value="2">Red</option>
@@ -59,8 +59,8 @@
             </select>
             <br>
             <label>Band 3 (Only use for 5 & 6 Band Resistor)</label>
-            <select>
-                <option value="n/a">N/A</option>
+            <select id="band_3">
+                <option value="">N/A</option>
                 <option value="0">Black</option>
                 <option value="1">Brown</option>
                 <option value="2">Red</option>
@@ -74,7 +74,7 @@
             </select>
             <br>
             <label>Multiplier</label>
-            <select>
+            <select id="band_multiplier">
                 <option value="0.01">Silver</option>
                 <option value="0.1">Gold</option>
                 <option value="1">Black</option>
@@ -88,7 +88,7 @@
             </select>
             <br>
             <label>Tolerance</label>
-            <select>
+            <select id="band_tolerance">
                 <option value="10">Silver</option>
                 <option value="5">Gold</option>
                 <option value="2">Red</option>
@@ -97,9 +97,21 @@
                 <option value="0.25">Blue</option>
                 <option value="0.1">Purple</option>
             </select>
+            <br>
+            <label>Temperture Coefficient</label>
+            <select id="band_tempCoefficient">
+                <option value="N/A">N/A</option>
+                <option value="100">Brown</option>
+                <option value="50">Red</option>
+                <option value="25">Yellow</option>
+                <option value="15">Orange</option>
+            </select>
         </form>
+        <br>
+        <br>
+        <button onclick="updateDisplay()">Find</button>
         <p>
-            The Resistor is <span>____</span> Ohms, with a tolerance of <span>____</span>, and a temperature coefficient of <span>___</span>.
+            The Resistor is <span id="text_ohms">____</span> Ohms, with a tolerance of <span id="text_tolerance"></span>, and a temperature coefficient of <span id="text_tempCoefficent">___</span> ppm.
         </p>
     </body>
 </html>
